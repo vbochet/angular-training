@@ -1,0 +1,38 @@
+<mat-card class="cocktail-card">
+  <div>
+    <mat-card-header>
+      <mat-card-title>
+        <h2>{{ recipe.name }}</h2>
+      </mat-card-title>
+    </mat-card-header>
+
+    <mat-card-subtitle>
+      <img mat-card-image [src]="recipe.picture" alt="Photo of a {{ recipe.name }}">
+      <span>{{ recipe.description }}</span>
+    </mat-card-subtitle>
+  </div>
+
+  <mat-card-content *ngIf="isExpanded">
+    <h4>Ingredients :</h4>
+    <ul>
+      <li *ngFor="let ingredient of recipe.ingredients">
+          {{ ingredient.quantity }} {{ ingredient.unit }} of {{ ingredient.name }}
+      </li>
+    </ul>
+
+    <h4>Instructions :</h4>
+    <ol>
+      <li *ngFor="let instruction of recipe.instructions">
+          {{ instruction }}
+      </li>
+    </ol>
+
+  </mat-card-content>
+  <mat-card-actions>
+      <button mat-button (click)="this.isExpanded = !this.isExpanded;">
+          <ng-container *ngIf="this.isExpanded; then less else more"></ng-container>
+          <ng-template #more>Expand</ng-template>
+          <ng-template #less>Hide</ng-template>
+      </button>
+  </mat-card-actions>
+</mat-card>
