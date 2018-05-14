@@ -5,16 +5,19 @@ import { HeaderComponent } from './header/header.component';
 import { RecipeComponent } from './recipe/recipe.component';
 import { CustomMaterialModule } from './custom-material/custom-material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RecipeModule } from './recipe/recipe.module';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    RecipeComponent
+    HeaderComponent
   ],
   imports: [
     BrowserAnimationsModule,
-    CustomMaterialModule
+    AppRoutingModule,
+    CustomMaterialModule,
+    RecipeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
