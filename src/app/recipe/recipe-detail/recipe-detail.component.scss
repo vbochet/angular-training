@@ -1,0 +1,46 @@
+.cocktail-card {
+  max-width: 500px;
+  margin: 15px;
+  display:inline-block;
+  vertical-align: top;
+}
+
+.cocktail-card mat-card-header {
+  height: 30px;
+}
+
+.cocktail-card h2 {
+  margin-top:5px;
+}
+
+.cocktail-card h4 {
+  margin-bottom:5px;
+}
+
+.cocktail-card mat-card-subtitle {
+  margin: 15px;
+  min-height: 170px;
+}
+
+.cocktail-card mat-card-actions {
+  text-align: center;
+}
+
+.cocktail-card img {
+  margin: 0 15px 0 0;
+  height: 170px;
+  width: auto;
+  float: left;
+}
+
+.cocktail-card mat-card-subtitle {
+  text-align: justify;
+}
+
+.cocktail-card mat-card-subtitle span {
+  margin-top: 15px;
+}
+
+.cocktail-card mat-card-content ul {
+  margin-bottom: 15px;
+}
