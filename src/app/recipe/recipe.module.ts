@@ -9,6 +9,7 @@ import { RecipeService } from './recipe.service';
 import { ToArrayPipe } from './to-array.pipe';
 import { RecipeAddComponent } from './recipe-add/recipe-add.component';
 import { FormsModule } from '@angular/forms';
+import { RecipeDeleteComponent } from './recipe-delete/recipe-delete.component';
 
 @NgModule({
   imports: [
@@ -25,7 +26,8 @@ import { FormsModule } from '@angular/forms';
     RecipesComponent,
     RecipeDetailComponent,
     ToArrayPipe,
-    RecipeAddComponent
+    RecipeAddComponent,
+    RecipeDeleteComponent
   ],
   providers: [
     RecipeService

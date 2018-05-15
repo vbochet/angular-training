@@ -1,4 +1,4 @@
-<mat-card class="cocktail-card">
+<mat-card class="cocktail-card" *ngIf="!this.isDeleted">
   <div>
     <mat-card-header>
       <mat-card-title>
@@ -34,5 +34,6 @@
           <ng-template #more>Expand</ng-template>
           <ng-template #less>Hide</ng-template>
       </button>
+      <button mat-button (click)="submitForm()">Delete</button>
   </mat-card-actions>
 </mat-card>

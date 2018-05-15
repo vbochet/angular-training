@@ -23,4 +23,8 @@ export class RecipeService {
     return this.http.post<Recipe>(this.baseUrl + '/recipes/', recipe);
   }
 
+  deleteRecipe(id: string): Observable<any> {
+    return this.http.delete<any>(this.baseUrl + '/recipes/' + id);
+  }
+
 }
