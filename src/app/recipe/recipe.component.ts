@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Injectable } from '@angular/core';
+import { Component, OnInit, Input, Injectable, EventEmitter, Output } from '@angular/core';
 import { Recipe } from './recipe.model';
 import { RecipeService } from './recipe.service';
 import { Router } from '@angular/router';
@@ -12,9 +12,9 @@ import { Router } from '@angular/router';
 @Injectable()
 export class RecipeComponent {
 
+  @Output() delete = new EventEmitter<number>();
   @Input() recipe: Recipe;
   isExpanded = false;
-  isDeleted = false;
 
   constructor(private router: Router, private recipeService: RecipeService) {
   }
@@ -22,7 +22,7 @@ export class RecipeComponent {
   submitForm() {
     this.recipeService.deleteRecipe(this.recipe.id.toString())
           .subscribe(
-            () => this.isDeleted = true,
+            () => this.delete.emit(this.recipe.id),
             error => console.error('Oups', error),
             () => console.log('Finished')
           );

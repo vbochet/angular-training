@@ -3,5 +3,5 @@
   recipes works!
 </p>
 -->
-<app-recipe *ngFor="let recipe of recipes" [recipe]="recipe">
+<app-recipe *ngFor="let recipe of recipes" [recipe]="recipe" (delete)="delete($event)">
 </app-recipe>
