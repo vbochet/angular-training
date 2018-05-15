@@ -1,0 +1,20 @@
+<h2>Update Cocktail</h2>
+<form [formGroup]="updateForm">
+  <table>
+    <tr>
+      <td style="text-align: right;"><label for="name">Name: </label></td>
+      <td><input class="form-control" formControlName="name"></td>
+    </tr>
+    <tr>
+      <td style="text-align: right;"><label for="picture">Picture URL: </label></td>
+      <td><input class="form-control" formControlName="picture"></td>
+    </tr>
+    <tr>
+      <td style="text-align: right;"><label for="description">Description: </label></td>
+      <td><textarea class="form-control" formControlName="description"></textarea></td>
+    </tr>
+    <tr>
+      <td colspan="2" style="text-align: center;"><button (click)="submitForm()">Update</button></td>
+    </tr>
+  </table>
+</form>

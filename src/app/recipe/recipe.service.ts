@@ -23,6 +23,10 @@ export class RecipeService {
     return this.http.post<Recipe>(this.baseUrl + '/recipes/', recipe);
   }
 
+  updateRecipe(recipe: Recipe): Observable<any> {
+    return this.http.patch<Recipe>(this.baseUrl + '/recipes/', recipe);
+  }
+
   deleteRecipe(id: string): Observable<any> {
     return this.http.delete<any>(this.baseUrl + '/recipes/' + id);
   }

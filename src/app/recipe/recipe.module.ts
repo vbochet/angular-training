@@ -9,13 +9,16 @@ import { RecipeService } from './recipe.service';
 import { ToArrayPipe } from './to-array.pipe';
 import { RecipeAddComponent } from './recipe-add/recipe-add.component';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import { RecipeUpdateComponent } from './recipe-update/recipe-update.component';
 
 @NgModule({
   imports: [
     CommonModule,
     CustomMaterialModule,
     RouterModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     RecipesComponent
@@ -25,7 +28,8 @@ import { FormsModule } from '@angular/forms';
     RecipesComponent,
     RecipeDetailComponent,
     ToArrayPipe,
-    RecipeAddComponent
+    RecipeAddComponent,
+    RecipeUpdateComponent
   ],
   providers: [
     RecipeService

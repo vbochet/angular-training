@@ -34,6 +34,7 @@
           <ng-template #more>Expand</ng-template>
           <ng-template #less>Hide</ng-template>
       </button>
+      <a mat-button href="/recipes/update/{{recipe.id}}">Update</a>
       <button mat-button (click)="submitForm()">Delete</button>
   </mat-card-actions>
 </mat-card>
