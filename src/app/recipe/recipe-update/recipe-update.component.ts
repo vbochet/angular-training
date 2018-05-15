@@ -40,11 +40,9 @@ export class RecipeUpdateComponent implements OnInit {
 
     this.updateForm = this.fb.group({
       id: [new FormControl(), Validators.required],
-      name: [new FormControl(), Validators.required],
-      picture: new FormControl(),
-      description: new FormControl(),
-      ingredients: new FormControl(),
-      instructions: new FormControl(),
+      name: [new FormControl(), [Validators.required, Validators.maxLength(255)]],
+      picture: [new FormControl(), Validators.maxLength(255)],
+      description: [new FormControl(), Validators.maxLength(255)],
     });
   }
 

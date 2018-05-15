@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { RecipesComponent } from './recipe/recipes/recipes.component';
 import { RecipeDetailComponent } from './recipe/recipe-detail/recipe-detail.component';
 import { RecipeAddComponent } from './recipe/recipe-add/recipe-add.component';
+import { RecipeUpdateComponent } from './recipe/recipe-update/recipe-update.component';
 
 const routes: Routes = [
   {
@@ -14,6 +15,11 @@ const routes: Routes = [
   {
       path: 'recipes/add',
       component: RecipeAddComponent,
+      pathMatch: 'full'
+  },
+  {
+      path: 'recipes/update/:id',
+      component: RecipeUpdateComponent,
       pathMatch: 'full'
   },
   {
