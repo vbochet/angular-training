@@ -24,7 +24,7 @@ export class RecipesComponent implements OnInit {
   }
 
   delete(id: number) {
-    this.recipes.splice(this.recipes.findIndex(r => r.id === id));
+    this.recipes.splice(this.recipes.findIndex(r => r.id === id), 1);
   }
 
 }
