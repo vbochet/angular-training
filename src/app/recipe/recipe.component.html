@@ -22,7 +22,7 @@
 
     <h4>Instructions :</h4>
     <ol>
-      <li *ngFor="let instruction of recipe.instructions">
+      <li *ngFor="let instruction of recipe.instructions | toArray">
           {{ instruction }}
       </li>
     </ol>

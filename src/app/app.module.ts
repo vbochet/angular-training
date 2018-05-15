@@ -7,6 +7,7 @@ import { CustomMaterialModule } from './custom-material/custom-material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RecipeModule } from './recipe/recipe.module';
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { AppRoutingModule } from './app-routing.module';
     AppRoutingModule,
     CustomMaterialModule,
     RecipeModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

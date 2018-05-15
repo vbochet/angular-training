@@ -1,4 +1,4 @@
-<mat-card class="cocktail-card">
+<mat-card class="cocktail-card" *ngIf="recipe">
   <div>
     <mat-card-header>
       <mat-card-title>
@@ -22,7 +22,7 @@
 
     <h4>Instructions :</h4>
     <ol>
-      <li *ngFor="let instruction of recipe.instructions">
+      <li *ngFor="let instruction of recipe.instructions | toArray">
           {{ instruction }}
       </li>
     </ol>
