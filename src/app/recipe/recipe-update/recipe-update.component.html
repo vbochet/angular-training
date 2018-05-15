@@ -7,14 +7,14 @@
     </tr>
     <tr>
       <td style="text-align: right;"><label for="picture">Picture URL: </label></td>
-      <td><input class="form-control" formControlName="picture"></td>
+      <td><input class="form-control" formControlName="picture" /></td>
     </tr>
     <tr>
       <td style="text-align: right;"><label for="description">Description: </label></td>
       <td><textarea class="form-control" formControlName="description"></textarea></td>
     </tr>
     <tr>
-      <td colspan="2" style="text-align: center;"><button (click)="submitForm()">Update</button></td>
+      <td colspan="2" style="text-align: center;"><button (click)="submitForm()" [disabled]="updateForm.invalid">Update</button></td>
     </tr>
   </table>
 </form>
