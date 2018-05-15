@@ -1,0 +1,19 @@
+<form>
+  <table>
+    <tr>
+      <td style="text-align: right;"><label for="name">Name: </label></td>
+      <td><input placeholder="Name" name="name" id="name" type="text" [(ngModel)]="recipe.name" /></td>
+    </tr>
+    <tr>
+      <td style="text-align: right;"><label for="picture">Picture URL: </label></td>
+      <td><input name="picture" id="picture" type="text" [(ngModel)]="recipe.picture" /></td>
+    </tr>
+    <tr>
+      <td style="text-align: right;"><label for="description">Description: </label></td>
+      <td><textarea name="description" id="description" [(ngModel)]="recipe.description"></textarea></td>
+    </tr>
+    <tr>
+      <td colspan="2" style="text-align: center;"><button (click)="submitForm()">Add</button></td>
+    </tr>
+  </table>
+</form>
